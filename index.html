@@ -237,6 +237,20 @@ a.medida:hover{border-color:#E4C57E;background:rgba(203,162,89,.12);color:#EDECE
 }
 @media(prefers-reduced-motion:reduce){.diamond,.arrow .flow{animation:none}}
 
+
+/* ---------- APOIO & REINTEGRAÇÃO ---------- */
+.apoio-grid{display:grid;gap:2.2rem;margin-top:2.2rem}
+@media(min-width:820px){.apoio-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+.apoio-col h3{font-size:1.18rem;margin-bottom:.7rem}
+.apoio-col p{color:var(--muted);font-size:1.02rem}
+.apoio-measures{list-style:none;padding:0;margin:.1rem 0 0;display:grid;gap:.95rem}
+.apoio-measures li{position:relative;padding-left:1.6rem;color:var(--muted);font-size:1.02rem}
+.apoio-measures li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.apoio-measures li b{color:var(--ink);font-weight:600}
+.apoio-imaj{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line);font-size:1.08rem;line-height:1.65;color:var(--ink);max-width:66ch}
+.apoio-imaj a{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap}
+.apoio-imaj a:hover{text-decoration:underline}
+
 </style>
 </head>
 <body>
@@ -310,7 +324,7 @@ a.medida:hover{border-color:#E4C57E;background:rgba(203,162,89,.12);color:#EDECE
         </article>
         <article class="svc reveal">
           <span class="svc-badge badge-plus">Diferencial</span>
-          <span class="svc-num">03 · avulso</span>
+          <span class="svc-num">avulso</span>
           <h3>Mediação de conflitos</h3>
           <p>Sessões conduzidas por profissional habilitada — trata o conflito antes que vire assédio, afastamento ou ação trabalhista.</p>
           <a class="svc-go" href="#mediacao">Como funciona <span class="circle" aria-hidden="true">→</span></a>
@@ -354,8 +368,8 @@ a.medida:hover{border-color:#E4C57E;background:rgba(203,162,89,.12);color:#EDECE
           </div>
           <span class="step-num">03</span>
           <h3>Apoiar</h3>
-          <p>Encaminhar quem adoeceu ao cuidado certo — psicólogo ou médico de família — e apoiar a volta ao trabalho.</p>
-          <span class="medida">Encaminhamento e reintegração</span>
+          <p>Acessar cuidado, permanecer no trabalho e prosperar.</p>
+          <a class="medida" href="#apoio">Acomodações e reintegração</a>
         </div>
       </div>
       <div class="facilitador reveal"><b>Ambiente facilitador:</b> liderança · investimento · participação · evidência · compliance</div>
@@ -463,7 +477,7 @@ a.medida:hover{border-color:#E4C57E;background:rgba(203,162,89,.12);color:#EDECE
   <section id="mediacao" class="nr1" aria-labelledby="med-h">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">03 · Diferencial · avulso</span>
+        <span class="eyebrow">Diferencial · avulso</span>
         <h2 id="med-h">Mediação de conflitos — trata o desgaste antes que vire processo.</h2>
         <p>Não é obrigação da NR-1: é o nosso diferencial. Um processo confidencial e imparcial em que as próprias partes constroem a solução, preservando o convívio. Sessões de até 2 horas, presenciais ou online.</p>
       </div>
@@ -474,6 +488,32 @@ a.medida:hover{border-color:#E4C57E;background:rgba(203,162,89,.12);color:#EDECE
       <div style="margin-top:1.6rem">
         <a class="btn btn-ghost" id="waMed" href="#" target="_blank" rel="noopener">Solicitar uma sessão</a>
       </div>
+    </div>
+  </section>
+
+  <!-- APOIO & REINTEGRAÇÃO (estratégia Apoiar) -->
+  <section id="apoio" aria-labelledby="apoio-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">03 · Apoiar · reintegração</span>
+        <h2 id="apoio-h">Quando alguém adoece, o cuidado não termina no diagnóstico.</h2>
+        <p>Apoiar é ajudar quem enfrenta uma condição de saúde mental a acessar cuidado, permanecer no trabalho e prosperar — sem ter de escolher entre a saúde e o emprego.</p>
+      </div>
+      <div class="apoio-grid">
+        <div class="apoio-col reveal">
+          <h3>O cuidado clínico</h3>
+          <p>O primeiro passo é da área da saúde: o <b>encaminhamento a um psicólogo ou ao médico de família</b>, para que a pessoa receba o tratamento certo no tempo certo.</p>
+        </div>
+        <div class="apoio-col reveal">
+          <h3>O papel da empresa</h3>
+          <ul class="apoio-measures">
+            <li><b>Acomodações razoáveis</b> — ajustar carga, jornada e funções ao momento da pessoa.</li>
+            <li><b>Reintegração gradual</b> — um retorno acompanhado, e não um salto de volta.</li>
+            <li><b>Vínculo preservado</b> — manter pertencimento e emprego durante a recuperação.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="apoio-imaj reveal">É aqui que o IMAJ também entra: ajudamos a estruturar os <b>protocolos e fluxos de acolhimento e reintegração</b>, para que apoiar deixe de ser improviso e vire prática da casa. <a id="waApoio" href="#" target="_blank" rel="noopener">Falar sobre isso →</a></p>
     </div>
   </section>
 
@@ -525,6 +565,7 @@ setWA("waNr1","Olá! Quero um diagnóstico de riscos psicossociais (NR-1) para a
 setWA("waMed","Olá! Tenho interesse em uma sessão de mediação de conflitos.");
 setWA("waFinal","Olá! Quero saber se minha empresa está em conformidade com a NR-1.");
 setWA("waFoot","Olá! Vim pelo site do IMAJ.");
+setWA("waApoio","Olá! Quero estruturar o apoio e a reintegração de colaboradores na minha empresa.");
 // palestras sem LP própria → WhatsApp com o tema pré-preenchido
 document.querySelectorAll(".tr-wa").forEach(el=>{
   el.href = waLink(`Olá! Quero saber sobre a palestra: ${el.dataset.tema}.`);
