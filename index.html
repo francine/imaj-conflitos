@@ -158,6 +158,18 @@ section{padding-block:clamp(3rem,8vw,5.4rem)}
 .chip[data-soon] .arw{color:var(--faint)}
 .chip-note{margin-top:1.1rem;font-size:.86rem;color:var(--faint)}
 
+/* ---------- TREINAMENTOS (cards com nome completo, agrupados) ---------- */
+.tr-group{margin-top:2.2rem}
+.tr-group-h{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:500;margin:0 0 .9rem}
+.tr-list{display:grid;gap:.8rem;grid-template-columns:1fr}
+@media(min-width:820px){.tr-list{grid-template-columns:1fr 1fr}}
+.tr-card{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;text-decoration:none;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.05rem 1.2rem;
+  box-shadow:var(--shadow);transition:border-color var(--fast) var(--ease),transform var(--fast) var(--ease)}
+.tr-card:hover{border-color:var(--gold-line);transform:translateY(-2px)}
+.tr-title{font-weight:600;font-size:.95rem;line-height:1.36;color:var(--ink)}
+.tr-go{flex:0 0 auto;color:var(--accent);font-size:.8rem;font-family:var(--font-mono);white-space:nowrap;margin-top:.2rem}
+
 /* ---------- SOBRE ---------- */
 .sobre-grid{display:grid;gap:2rem;margin-top:2rem;align-items:center}
 @media(min-width:820px){.sobre-grid{grid-template-columns:.8fr 1.2fr}}
@@ -267,6 +279,38 @@ footer{border-top:1px solid var(--line);padding-block:2.4rem;color:var(--faint);
     </div>
   </section>
 
+  <!-- ESTRATÉGIAS (framework OMS) -->
+  <section id="estrategias" aria-labelledby="est-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">O enquadramento</span>
+        <h2 id="est-h">Cuidar da saúde mental no trabalho tem três estratégias.</h2>
+        <p>Da prevenção ao apoio — e cada serviço do IMAJ entrega uma delas.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <span class="svc-num">01 · estratégia</span>
+          <h3>Prevenir</h3>
+          <p>Reestruturar o ambiente de trabalho para reduzir os riscos psicossociais antes que afetem a saúde mental. <b>Principal medida:</b> gestão de riscos psicossociais.</p>
+          <a class="svc-go" href="#nr1">Fazemos com a NR-1 / GRO <span class="circle" aria-hidden="true">→</span></a>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-num">02 · estratégia</span>
+          <h3>Proteger &amp; promover</h3>
+          <p>Conscientizar e identificar cedo — proteger e promover a saúde mental de todos. <b>Principal medida:</b> treinamento de gestores e colaboradores.</p>
+          <a class="svc-go" href="#treinamentos">Fazemos com treinamentos <span class="circle" aria-hidden="true">→</span></a>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-num">03 · estratégia</span>
+          <h3>Apoiar</h3>
+          <p>Apoiar quem precisa a acessar cuidado, permanecer e prosperar no trabalho. <b>Principal medida:</b> acolhimento e resolução de conflitos.</p>
+          <a class="svc-go" href="#mediacao">Fazemos com mediação <span class="circle" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <p class="chip-note">Baseado nas diretrizes da OMS para saúde mental no trabalho.</p>
+    </div>
+  </section>
+
   <!-- NR-1 CARRO-CHEFE -->
   <section id="nr1" class="nr1" aria-labelledby="nr1-h">
     <div class="wrap">
@@ -314,18 +358,52 @@ footer{border-top:1px solid var(--line);padding-block:2.4rem;color:var(--faint);
       <div class="sec-head reveal">
         <span class="eyebrow">02 · Catálogo</span>
         <h2 id="tr-h">Treinamentos & palestras que preparam a liderança.</h2>
-        <p>Cada tema abre sua própria página. Clique para conhecer — ou fale com a gente para montar um programa sob medida.</p>
+        <p>Da prevenção ao respeito — para empresas, lideranças e escolas. Os temas com ↗ já têm página própria; os demais a gente monta com você.</p>
       </div>
-      <div class="chips reveal">
-        <a class="chip" href="https://imajbrasil.com/lp/assedio" target="_blank" rel="noopener">Assédio moral e violência simbólica <span class="arw">↗</span></a>
-        <a class="chip" href="https://imajbrasil.com/lp/violencia" target="_blank" rel="noopener">Violência psicológica e saúde da mulher <span class="arw">↗</span></a>
-        <a class="chip" href="https://imajbrasil.com/lp/parentalidade" target="_blank" rel="noopener">Parentalidade e coparentalidade <span class="arw">↗</span></a>
-        <a class="chip" id="trLideranca" href="#" target="_blank" rel="noopener" data-soon>Liderança humanizada e preventiva <span class="arw">→</span></a>
-        <a class="chip" id="trCnv" href="#" target="_blank" rel="noopener" data-soon>Comunicação não violenta e escuta empática <span class="arw">→</span></a>
-        <a class="chip" id="trGenero" href="#" target="_blank" rel="noopener" data-soon>Perspectiva de gênero e inclusão LGBTQIAPN+ <span class="arw">→</span></a>
-        <a class="chip" id="trMisoginia" href="#" target="_blank" rel="noopener" data-soon>Enfrentamento à misoginia na escola <span class="arw">→</span></a>
+
+      <div class="tr-group reveal">
+        <h3 class="tr-group-h">Nas organizações</h3>
+        <div class="tr-list">
+          <a class="tr-card" href="https://imajbrasil.com/lp/assedio" target="_blank" rel="noopener">
+            <span class="tr-title">Assédio Moral e Violência Simbólica nas Organizações: Prevenção, Responsabilização e Cultura de Respeito</span>
+            <span class="tr-go">Conhecer ↗</span></a>
+          <a class="tr-card" href="https://imajbrasil.com/lp/violencia" target="_blank" rel="noopener">
+            <span class="tr-title">Violência Psicológica contra a Mulher: Prevenção e Impactos na Saúde</span>
+            <span class="tr-go">Conhecer ↗</span></a>
+          <a class="tr-card" href="https://imajbrasil.com/lp/parentalidade" target="_blank" rel="noopener">
+            <span class="tr-title">Parentalidade e Coparentalidade Responsável e Participativa: Desafios e Possíveis Caminhos</span>
+            <span class="tr-go">Conhecer ↗</span></a>
+          <a class="tr-card tr-wa" data-tema="Comunicação Não Violenta e Escuta Ativa">
+            <span class="tr-title">Comunicação Não Violenta e Escuta Ativa: Práticas e Benefícios para um Ambiente Seguro</span>
+            <span class="tr-go">Falar →</span></a>
+          <a class="tr-card tr-wa" data-tema="Perspectiva de Gênero e Inclusão LGBTQIAPN+ nas Empresas">
+            <span class="tr-title">Perspectiva de Gênero e Inclusão LGBTQIAPN+ nas Empresas</span>
+            <span class="tr-go">Falar →</span></a>
+        </div>
       </div>
-      <p class="chip-note">Os temas com ↗ já têm página própria. Os demais montamos com você — o catálogo cresce.</p>
+
+      <div class="tr-group reveal">
+        <h3 class="tr-group-h">Para líderes</h3>
+        <div class="tr-list">
+          <a class="tr-card tr-wa" data-tema="Liderança que Inspira — Comunicação Respeitosa, Segurança Psicológica e Prevenção do Assédio">
+            <span class="tr-title">Liderança que Inspira: Comunicação Respeitosa, Segurança Psicológica e Prevenção do Assédio</span>
+            <span class="tr-go">Falar →</span></a>
+        </div>
+      </div>
+
+      <div class="tr-group reveal">
+        <h3 class="tr-group-h">Na escola</h3>
+        <div class="tr-list">
+          <a class="tr-card tr-wa" data-tema="Misoginia entre Adolescentes — a escola como território de proteção">
+            <span class="tr-title">Misoginia entre Adolescentes: A Escola como Território de Proteção, Prevenção e Enfrentamento à Violência Contra Meninas e Mulheres</span>
+            <span class="tr-go">Falar →</span></a>
+          <a class="tr-card tr-wa" data-tema="Bullying e Cyberbullying — identificar, prevenir e transformar conflitos">
+            <span class="tr-title">Bullying e Cyberbullying: Como Identificar, Prevenir e Transformar Conflitos</span>
+            <span class="tr-go">Falar →</span></a>
+        </div>
+      </div>
+
+      <p class="chip-note reveal">O catálogo ainda cresce — novos temas em preparação.</p>
     </div>
   </section>
 
@@ -395,9 +473,11 @@ setWA("waNr1","Olá! Quero um diagnóstico de riscos psicossociais (NR-1) para a
 setWA("waMed","Olá! Tenho interesse em uma sessão de mediação de conflitos.");
 setWA("waFinal","Olá! Quero saber se minha empresa está em conformidade com a NR-1.");
 setWA("waFoot","Olá! Vim pelo site do IMAJ.");
-// temas sem LP própria → WhatsApp com o tema pré-preenchido
-[["trLideranca","Liderança humanizada e preventiva"],["trCnv","Comunicação não violenta e escuta empática"],["trGenero","Perspectiva de gênero e inclusão LGBTQIAPN+"],["trMisoginia","Enfrentamento à misoginia na escola"]]
-  .forEach(([id,tema])=>{ const el=document.getElementById(id); if(el){ el.href=waLink(`Olá! Quero saber sobre o treinamento: ${tema}.`); el.removeAttribute("target"); }});
+// palestras sem LP própria → WhatsApp com o tema pré-preenchido
+document.querySelectorAll(".tr-wa").forEach(el=>{
+  el.href = waLink(`Olá! Quero saber sobre a palestra: ${el.dataset.tema}.`);
+  el.target = "_blank"; el.rel = "noopener";
+});
 
 // ---- Tema claro/escuro ----
 const root = document.documentElement, tbtn = document.getElementById("themeBtn");
